@@ -5,30 +5,19 @@
 ;; Author: Emiliano Rizzonelli <emiliano.rizzonelli@proton.me>
 ;; URL: http://github.com/a9sk/amaranth-dark-theme
 ;; Version: 0.1.0
-;; License:
+;; Package-Requires: ((emacs "24.1"))
+;; License: MIT
 
-;; Permission is hereby granted, free of charge, to any person
-;; obtaining a copy of this software and associated documentation
-;; files (the "Software"), to deal in the Software without
-;; restriction, including without limitation the rights to use, copy,
-;; modify, merge, publish, distribute, sublicense, and/or sell copies
-;; of the Software, and to permit persons to whom the Software is
-;; furnished to do so, subject to the following conditions:
+;;; Commentary:
 
-;; The above copyright notice and this permission notice shall be
-;; included in all copies or substantial portions of the Software.
+;; Amaranth Dark is a high-contrast dark color theme for Emacs.
+;; It focuses on readability, strong syntax contrast, and a deep
+;; black background suitable for low-light environments.
 
-;; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-;; EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-;; MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-;; NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
-;; BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
-;; ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-;; CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-;; SOFTWARE.
+;;; Code:
 
 (deftheme amaranth-dark
-  "Amaranth Dark color theme for Emacs")
+  "Amaranth Dark color theme for Emacs.")
 
 ;; +x -> lighter, -x -> darker.
 (let (
@@ -152,14 +141,14 @@
                    :foreground unspecified
                    :background unspecified
                    :inherit unspecified))
-      (t (:forground ,amaranth-dark-yellow :weight bold :underline t))))
+      (t (:foreground ,amaranth-dark-yellow :weight bold :underline t))))
    `(flymake-infoline
      ((((supports :underline (:style wave)))
        (:underline (:style wave :color ,amaranth-dark-green)
                    :foreground unspecified
                    :background unspecified
                    :inherit unspecified))
-      (t (:forground ,amaranth-dark-green :weight bold :underline t))))
+      (t (:foreground ,amaranth-dark-green :weight bold :underline t))))
 
    ;; flyspell
    `(flyspell-incorrect
@@ -315,8 +304,7 @@
    `(orderless-match-face-0 ((t (:foreground ,amaranth-dark-yellow))))
    `(orderless-match-face-1 ((t (:foreground ,amaranth-dark-green))))
    `(orderless-match-face-2 ((t (:foreground ,amaranth-dark-brown))))
-   `(orderless-match-face-3 ((t (:foreground ,amaranth-dark-quartz))))
-   ))
+   `(orderless-match-face-3 ((t (:foreground ,amaranth-dark-quartz))))))
 
 ;;;###autoload
 (when load-file-name
